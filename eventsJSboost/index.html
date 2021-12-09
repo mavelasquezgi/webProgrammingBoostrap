@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta title="JSFuctionsWithEvents">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+
+<body>
+    <main>
+        <header>
+            <h1 class="display-1 text-info">Eventos y funiones JS</h1>
+        </header>
+
+        <body>
+            <div class="container">
+                <form >
+                    <div class="mb-3">
+                        <label for="InputName" class="form-label">Ingrese su nombre</label>
+                        <input type="text" class="form-control" id="InputName" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="InputLastName" class="form-label">Ingrese su apellido</label>
+                        <input type="text" class="form-control" id="InputLastName" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="InputEmail" class="form-label">Ingrese su correo electrónico</label>
+                        <input type="email" class="form-control" id="InputEmail" aria-describedby="emailHelp">
+                        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="InputPassword1" class="form-label">Ingrese contrasena</label>
+                        <input type="password" class="form-control" id="InputPassword1" pattern="^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[#?!@$%^&*-]).{8,11}$" onchange="validPwd()" title="debe tener una letra minuscula, una mayuscula, un caracter especial y de 8 a 11 caracteres" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="InputPassword2" class="form-label">Confirme contrasena</label>
+                        <input type="password" class="form-control" id="InputPassword2" pattern="^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[#?!@$%^&*-]).{8,11}$" onchange="validPwd()" title="debe tener una letra minuscula, una mayuscula, un caracter especial y de 8 a 11 caracteres" required>
+                    </div>
+                    <div id="pwdValid">
+
+                    </div>
+                    <div class="container">
+                        <strong>Es mayor de edad?</strong>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="Radios" id="Radios1"
+                                value="1" onclick="radioAge (1)" >
+                            <label class="form-check-label" for="Radios1">
+                                Tengo mas de 18
+                            </label>
+                        </div>
+
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="Radios" id="Radios2"
+                                value="0" onclick="radioAge (2)" >
+                            <label class="form-check-label" for="Radios2">
+                                No Tengo mas de 18
+                            </label>
+                        </div>
+                        <div id="validAge"></div>
+                    </div>
+                    <button type="submit" class="btn btn-primary" id="Botton1">Submit</button>
+                </form>
+            </div>
+        </body>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+<script src="eventFunc.js"></script>
+
+</html>
